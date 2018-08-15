@@ -98,7 +98,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/home_bg_2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -108,7 +108,7 @@
 							<h1>Lorenzo</h1>
 							<h2>23 Settembre, 2018</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">mancano</a></p>
+							<!-- <p><a href="#" class="btn btn-default btn-sm">mancano</a></p> -->
 						</div>
 					</div>
 				</div>
@@ -149,7 +149,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/home_bg_3.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -175,7 +175,7 @@
 										<span>Domenica 23</span>
 										<span>Novembre, 2018</span>
 									</div>
-									<p>Sulle montagne, nel paesino di Filetta, dove vivo con mamma e papà, ci sono due chiesette. In quella piccina picciò, dedicata a Sant'Andrea, incontrerò per la prima volta il Signore.</p>
+									<p>Sulle montagne, nel paesino di Filetta, dove vivo con mamma e papà, ci sono due chiesette. In quella piccina picciò, dedicata a Sant'Andrea, incontrerò per la prima volta il Signore. Non mancare.</p>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
@@ -567,7 +567,7 @@
 				</div>
 
 				<div class="col-md-6 animate-box">
-					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
+					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_church_1.jpg); ">
 						<!-- <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a> -->
 						<div class="overlay"></div>
 					</div>
@@ -616,7 +616,7 @@
 					</div>
 	
 					<div class="col-md-6 animate-box">
-						<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
+						<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_restourant_1.jpg); ">
 							<!-- <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a> -->
 							<div class="overlay"></div>
 						</div>
@@ -639,29 +639,29 @@
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline">
-						<div class="row">
+					<form action="https://formspree.io/crisc.mic@gmail.com" class="form-inline" method="POST">
+						<div class="row">						  
 							<div class="col-md-4 col-sm-4">
 								<div class="form-group">
 									<label for="name" class="sr-only">Nome</label>
-									<input type="name" class="form-control" id="name" placeholder="Name">
+									<input  name="name" type="text" class="form-control" id="nome" placeholder="Name">
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
 								<div class="form-group">
 									<label for="email" class="sr-only">Email</label>
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<input name="_replyto" type="email" class="form-control" id="email" placeholder="Email">
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
-								<button type="submit" class="btn btn-default btn-block">Invia</button>
+								<button type="submit" value="Send" class="btn btn-default btn-block">Invia</button>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
-									<label for="note" class="sr-only">Informazioni</label>
-									<textarea rows="3" type="note" class="form-control" id="note" placeholder="Allergie/intolleranze o altro"></textarea>
+									<label for="message" class="sr-only">Informazioni</label>
+									<textarea name="message" rows="3" class="form-control" id="message" placeholder="Allergie/intolleranze o altro"></textarea>
 								</div>
 							</div>
 						</div>
@@ -724,6 +724,7 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
+	<!-- script per il countdown -->
 	<script>
 
     // default example
@@ -731,10 +732,43 @@
         year: 2018,
         month: 09,
 		day: 23,
-		hours: 13
+		hours: 13,
+		words: { //words displayed into the countdown
+			days: 'giorni',
+			hours: 'ore',
+			minutes: 'minuti',
+			seconds: 'secondi',
+			pluralLetter: ''
+		},
+		plural: false
     });
 
 </script>
+
+<!-- script per inviare una mail -->
+<script type="text/javascript">
+	function sendEmail() {
+	  var email = document.modulo.email.value;
+	  var nome = document.modulo.nome.value;
+	  var note = document.modulo.note.value;
+	   
+	  if ((email.indexOf("@") == (-1)) || (email == "") || (email == "undefined")) {
+		alert("Inserire un indirizzo email valido.");
+		document.modulo.email.focus();
+	  }
+	  else if ((nome == "") || (nome == "undefined")) {
+		alert("Inserire un nome.");
+		document.modulo.nome.focus();
+	  }
+	  else if ((note == "") || (note == "undefined")) {
+		alert("Inserire un messaggio.");
+		document.modulo.note.focus();
+	  }
+	  else {
+		location.href = "mailto:" + email + "?Subject=" + "Battesimo di Lorenzo: invitato" + nome + "&Body=" + note; 
+	  }
+	}
+	</script>
 
 	</body>
 </html>
