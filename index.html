@@ -66,6 +66,25 @@
 
 	</head>
 	<body>
+
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/it_IT/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Your customer chat code -->
+		<div class="fb-customerchat"
+		attribution=setup_tool
+		page_id="517860578652736"
+		theme_color="#6699cc"
+		logged_in_greeting="Ciao! Posso aiutarti in qualche modo?"
+		logged_out_greeting="Ciao! Posso aiutarti in qualche modo?">
+	</div>
 		
 	<div class="fh5co-loader"></div>
 	
@@ -105,8 +124,10 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Lorenzo</h1>
-							<h2>23 Settembre, 2018</h2>
+							<!-- <h1>Lorenzo</h1> -->
+							<h1>&nbsp;</h1>
+							<!-- <h2>Manca poco</h2> -->
+							<h2>&nbsp;</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<!-- <p><a href="#" class="btn btn-default btn-sm">mancano</a></p> -->
 						</div>
@@ -120,7 +141,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Ciao!</h2>
+					<h2>Lorenzo!</h2>
 					<h3>23 Settembre, 2018 Filetta</h3>
 					<p>Ti invito al mio battesimo</p>
 				</div>
@@ -214,7 +235,7 @@
 				<div class="col-md-12 col-md-offset-0">
 					<ul class="timeline animate-box">
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_1.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Sono nato</h3>
@@ -226,7 +247,7 @@
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_2.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Arrivato a casa</h3>
@@ -238,7 +259,7 @@
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_3.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Il mio primo bagnetto</h3>
@@ -250,7 +271,7 @@
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_4.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Quanta neve!</h3>
@@ -262,7 +283,7 @@
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_5.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Ho conosciuto le mie bisnonne</h3>
@@ -274,7 +295,7 @@
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_6.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">La mia auto nuova!</h3>
@@ -286,7 +307,7 @@
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_7.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">C'è un nuovo pipistrello in città</h3>
@@ -298,7 +319,7 @@
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_8.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Eh vai, si mangiaaaa!</h3>
@@ -310,14 +331,14 @@
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-story_9.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">VACANZA</h3>
-									<span class="date">SDADADASDA</span>
+									<span class="date">03 Luglio, 2018</span>
 								</div>
 								<div class="timeline-body">
-									<p>DADADSASDA</p>
+									<p>Ma che cos'è quella smisurata distesa azzurra che si muove davanti ai miei occhi. Sento un irrefrenabile impulso di andarci incontro.</p>
 								</div>
 							</div>
 						</li>
@@ -560,7 +581,7 @@
 						<div class="feature-copy">
 							<h3>Indirizzo</h3>
 							<p>Questo è l'indirizzo della chiesa, per chi ha uno smartphone basta cliccare sull'indirizzo: 
-								<a href="https://www.google.it/maps/dir/''/chiesa+filetta/@40.694694,14.8021944,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x133bdc94dc52ab2f:0xf43f6a0c955d772!2m2!1d14.8722343!2d40.6947152">Piazza Crocifisso, 34, 84099 Pezzano-filetta SA</a></p>
+								<a href="https://www.google.it/maps/place/Chiesa+Di+Sant'Andrea+Apostolo/@40.6947192,14.8700456,17z/data=!3m1!4b1!4m5!3m4!1s0x133bdc94dc52ab2f:0xf43f6a0c955d772!8m2!3d40.6947152!4d14.8722343">Piazza Crocifisso, 34, 84099 Pezzano-filetta SA</a></p>
 						</div>
 					</div>
 
@@ -628,7 +649,7 @@
 		</div>
 
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/home_bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -746,7 +767,7 @@
 </script>
 
 <!-- script per inviare una mail -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	function sendEmail() {
 	  var email = document.modulo.email.value;
 	  var nome = document.modulo.nome.value;
@@ -768,7 +789,7 @@
 		location.href = "mailto:" + email + "?Subject=" + "Battesimo di Lorenzo: invitato" + nome + "&Body=" + note; 
 	  }
 	}
-	</script>
+	</script> -->
 
 	</body>
 </html>
