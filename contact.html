@@ -216,8 +216,9 @@
 		</div>
 	</div>
 
-	<div id="map" class="fh5co-map"></div>
-		<!-- END map -->
+	<!-- maps -->
+	<div id="mapchiesa" class="fh5co-map"></div>
+	<div id="mapristorante" class="fh5co-map"></div>>
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
@@ -266,8 +267,30 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
+	<script>
+		function initMap() {
+			// The location of chiesa
+			var chiesa = {lat: 40.6947152, lng:14.8700456};
+			// The map, centered at chiesa
+			var mapChiesa = new google.maps.Map(
+				document.getElementById('mapchiesa'), {zoom: 17, center: chiesa});
+			// The marker, positioned at chiesa
+			var markerChiesa = new google.maps.Marker({position: chiesa, map: mapChiesa});
+
+
+			//	the location of restaurant
+			var ristorante = {lat: 40.705091, lng:14.8827968};
+			//	the map, center at ristorante
+			var mapRistorante = new google.maps.Map(
+				document.getElementById('mapristorante'), {zoom: 17, center: ristorante});
+			//	the marker, positioned at ristorante
+			var markerRistorante = new google.maps.Marker({position: ristorante, map: mapRistorante});
+
+		}
+	</script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTdSgjRrW8rydyX5ug8I34pXlW4nuLlN4&callback=initMap">
+    </script>
 
 	<!-- Main -->
 	<script src="js/main.js"></script>
